@@ -1,0 +1,8 @@
+{
+    "C_Cpp.errorSquiggles": "Disabled",
+    "files.associations": {
+        "gpio.h": "c",
+        "glovardef.h": "c",
+        "glotypedef.h": "c"
+    }
+}

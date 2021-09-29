@@ -1,0 +1,12 @@
+--cpu Cortex-M0+
+".\objects\startup_hc32l110.o"
+".\objects\system_hc32l110.o"
+".\objects\main.o"
+".\objects\ddl.o"
+".\objects\interrupts_hc32l110.o"
+".\objects\clk.o"
+".\objects\gpio.o"
+--strict --scatter ".\Objects\toothPick.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\toothPick.map" -o .\Objects\toothPick.axf
