@@ -18,7 +18,7 @@ I (.\driver\inc\clk.h)(0x5ECDF70F)
 I (.\driver\inc\interrupts_hc32l110.h)(0x5ECDF70F)
 I (.\driver\inc\gpio.h)(0x5ECDF837)
 I (.\source\inc\ddl_device.h)(0x5F2386F7)
-F (.\source\main.c)(0x614EFBDA)(--c99 --gnu -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I .\driver\inc -I .\mcu\common -I .\source\inc -I .\profile-I.\RTE\_toothPick-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\HDSC\HC32L110\1.0.3\Device\Include-D__UVISION_VERSION="525" -D_RTE_-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+F (.\source\main.c)(0x6155B369)(--c99 --gnu -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I .\driver\inc -I .\mcu\common -I .\source\inc -I .\profile-I.\RTE\_toothPick-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\HDSC\HC32L110\1.0.3\Device\Include-D__UVISION_VERSION="525" -D_RTE_-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
 I (.\profile\GloVarDef.h)(0x614EF432)
 I (.\profile\GloTypeDef.h)(0x614EF441)
 I (.\driver\inc\ddl.h)(0x5ECDF70F)

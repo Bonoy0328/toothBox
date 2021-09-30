@@ -467,7 +467,7 @@ Image Symbol Table
     i.ddl_memclr                             0x00000e5c   Section        0  ddl.o(i.ddl_memclr)
     i.delay1ms                               0x00000e7c   Section        0  ddl.o(i.delay1ms)
     i.main                                   0x00000eb8   Section        0  main.o(i.main)
-    .constdata                               0x00000f38   Section        8  clk.o(.constdata)
+    .constdata                               0x00000fac   Section        8  clk.o(.constdata)
     .data                                    0x20000000   Section        4  system_hc32l110.o(.data)
     .bss                                     0x20000004   Section       96  libspace.o(.bss)
     HEAP                                     0x20000068   Section      256  startup_hc32l110.o(HEAP)
@@ -653,9 +653,9 @@ Image Symbol Table
     _sys_exit                                0x00000e59   Thumb Code     4  ddl.o(i._sys_exit)
     ddl_memclr                               0x00000e5d   Thumb Code    32  ddl.o(i.ddl_memclr)
     delay1ms                                 0x00000e7d   Thumb Code    50  ddl.o(i.delay1ms)
-    main                                     0x00000eb9   Thumb Code   126  main.o(i.main)
-    Region$$Table$$Base                      0x00000f40   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x00000f60   Number         0  anon$$obj.o(Region$$Table)
+    main                                     0x00000eb9   Thumb Code   242  main.o(i.main)
+    Region$$Table$$Base                      0x00000fb4   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x00000fd4   Number         0  anon$$obj.o(Region$$Table)
     SystemCoreClock                          0x20000000   Data           4  system_hc32l110.o(.data)
     __libspace_start                         0x20000004   Data          96  libspace.o(.bss)
     __temporary_stack_top$libspace           0x20000064   Data           0  libspace.o(.bss)
@@ -668,9 +668,9 @@ Memory Map of the image
 
   Image Entry point : 0x000000c1
 
-  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x00000f64, Max: 0x00008000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x00000fd8, Max: 0x00008000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x00000f60, Max: 0x00008000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x00000fd4, Max: 0x00008000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -784,19 +784,19 @@ Memory Map of the image
     0x00000e58   0x00000e58   0x00000004   Code   RO          162    i._sys_exit         ddl.o
     0x00000e5c   0x00000e5c   0x00000020   Code   RO          164    i.ddl_memclr        ddl.o
     0x00000e7c   0x00000e7c   0x0000003c   Code   RO          166    i.delay1ms          ddl.o
-    0x00000eb8   0x00000eb8   0x0000007e   Code   RO          101    i.main              main.o
-    0x00000f36   0x00000f36   0x00000002   PAD
-    0x00000f38   0x00000f38   0x00000008   Data   RO          459    .constdata          clk.o
-    0x00000f40   0x00000f40   0x00000020   Data   RO          888    Region$$Table       anon$$obj.o
+    0x00000eb8   0x00000eb8   0x000000f2   Code   RO          101    i.main              main.o
+    0x00000faa   0x00000faa   0x00000002   PAD
+    0x00000fac   0x00000fac   0x00000008   Data   RO          459    .constdata          clk.o
+    0x00000fb4   0x00000fb4   0x00000020   Data   RO          888    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x00000f60, Size: 0x00000268, Max: 0x00001000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x00000fd4, Size: 0x00000268, Max: 0x00001000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x00000f60   0x00000004   Data   RW           15    .data               system_hc32l110.o
+    0x20000000   0x00000fd4   0x00000004   Data   RW           15    .data               system_hc32l110.o
     0x20000004        -       0x00000060   Zero   RW          767    .bss                c_p.l(libspace.o)
-    0x20000064   0x00000f64   0x00000004   PAD
+    0x20000064   0x00000fd8   0x00000004   PAD
     0x20000068        -       0x00000100   Zero   RW            2    HEAP                startup_hc32l110.o
     0x20000168        -       0x00000100   Zero   RW            1    STACK               startup_hc32l110.o
 
@@ -812,12 +812,12 @@ Image component sizes
         96         10          0          0          0       1908   ddl.o
        496         22          0          0          0       1927   gpio.o
        266          0          0          0          0      11709   interrupts_hc32l110.o
-       360          0          0          0          0      44617   main.o
+       476          0          0          0          0      44673   main.o
         88         40        192          0        512        640   startup_hc32l110.o
         74         10          0          4          0      25319   system_hc32l110.o
 
     ----------------------------------------------------------------------
-      3096        218        232          4        512     102815   Object Totals
+      3212        218        232          4        512     102871   Object Totals
          0          0         32          0          0          0   (incl. Generated)
          4          0          0          0          0          0   (incl. Padding)
 
@@ -866,15 +866,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      3704        230        232          4        612     101111   Grand Totals
-      3704        230        232          4        612     101111   ELF Image Totals
-      3704        230        232          4          0          0   ROM Totals
+      3820        230        232          4        612     101167   Grand Totals
+      3820        230        232          4        612     101167   ELF Image Totals
+      3820        230        232          4          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                 3936 (   3.84kB)
+    Total RO  Size (Code + RO Data)                 4052 (   3.96kB)
     Total RW  Size (RW Data + ZI Data)               616 (   0.60kB)
-    Total ROM Size (Code + RO Data + RW Data)       3940 (   3.85kB)
+    Total ROM Size (Code + RO Data + RW Data)       4056 (   3.96kB)
 
 ==============================================================================
 

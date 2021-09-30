@@ -13,16 +13,17 @@ void Motor_Port_Init(void);
 #define OpenLed4    Gpio_SetIO(0,1,TRUE);
 #define CloseLed4   Gpio_SetIO(0,1,FALSE);
 
-
-#define MotorRotate Gpio_SetIO(3,2,FALSE);\
-                    Gpio_SetIO(2,5,FALSE);\
-                    Gpio_SetIO(3,3,TRUE);\
-                    Gpio_SetIO(2,3,TRUE);
-
-#define MotorRotateRev Gpio_SetIO(3,2,TRUE);\
+#define MotorRotate Gpio_SetIO(2,3,FALSE);\
                     Gpio_SetIO(2,5,TRUE);\
-                    Gpio_SetIO(3,3,FALSE);\
-                    Gpio_SetIO(2,3,FALSE);
+										delay1ms(300);\
+                    Gpio_SetIO(3,2,TRUE);\
+                    Gpio_SetIO(3,3,FALSE);
+
+#define MotorRotateRev Gpio_SetIO(3,2,FALSE);\
+                    Gpio_SetIO(3,3,TRUE);\
+										delay1ms(300);\
+										Gpio_SetIO(2,3,TRUE);\
+                    Gpio_SetIO(2,5,FALSE);
 
 int32_t main(void)
 {
@@ -32,21 +33,24 @@ int32_t main(void)
     
     Led_Port_Init();
     Motor_Port_Init();
-
+	
+		Gpio_SetIO(2,3,TRUE);
+		Gpio_SetIO(2,5,FALSE);
     while(1)
     {
+				MotorRotate;
         CloseLed1;
         CloseLed2;
         CloseLed3;
         CloseLed4;
-        // MotorRotate;
-        delay1ms(500);
+        delay1ms(1000);
+				MotorRotateRev;
         OpenLed1;
         OpenLed2;
         OpenLed3;
         OpenLed4;
-        // MotorRotateRev;
-        delay1ms(500);       
+        delay1ms(1000);     
+			
     }
 }
 
