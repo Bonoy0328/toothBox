@@ -426,6 +426,11 @@
               <FileType>1</FileType>
               <FilePath>.\driver\src\gpio.c</FilePath>
             </File>
+            <File>
+              <FileName>adc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\driver\src\adc.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
