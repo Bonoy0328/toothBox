@@ -431,6 +431,21 @@
               <FileType>1</FileType>
               <FilePath>.\driver\src\adc.c</FilePath>
             </File>
+            <File>
+              <FileName>uart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\driver\src\uart.c</FilePath>
+            </File>
+            <File>
+              <FileName>bt.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\driver\src\bt.c</FilePath>
+            </File>
+            <File>
+              <FileName>lpuart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\driver\src\lpuart.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
