@@ -7,11 +7,15 @@
                 "c:\\Users\\bonoy\\Desktop\\workspace2\\toothBox\\Prj\\mcu\\common",
                 "c:\\Users\\bonoy\\Desktop\\workspace2\\toothBox\\Prj\\source\\inc",
                 "c:\\Users\\bonoy\\Desktop\\workspace2\\toothBox\\Prj\\profile",
+                "c:\\Users\\bonoy\\Desktop\\workspace2\\toothBox\\Prj\\freeRTos\\inc",
+                "c:\\Users\\bonoy\\Desktop\\workspace2\\toothBox\\Prj\\freeRTos\\port\\RVDS\\ARM_CM0",
                 "C:\\Keil_v5\\ARM\\ARMCC\\include",
                 "C:\\Keil_v5\\ARM\\ARMCC\\include\\rw",
                 "c:\\Users\\bonoy\\Desktop\\workspace2\\toothBox\\Prj",
                 "c:\\Users\\bonoy\\Desktop\\workspace2\\toothBox\\Prj\\source",
-                "c:\\Users\\bonoy\\Desktop\\workspace2\\toothBox\\Prj\\driver\\src"
+                "c:\\Users\\bonoy\\Desktop\\workspace2\\toothBox\\Prj\\driver\\src",
+                "c:\\Users\\bonoy\\Desktop\\workspace2\\toothBox\\Prj\\freeRTos",
+                "c:\\Users\\bonoy\\Desktop\\workspace2\\toothBox\\Prj\\freeRTos\\port\\MemMang"
             ],
             "defines": [
                 "__CC_ARM",

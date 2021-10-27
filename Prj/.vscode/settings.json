@@ -3,6 +3,9 @@
     "files.associations": {
         "gpio.h": "c",
         "glovardef.h": "c",
-        "glotypedef.h": "c"
+        "glotypedef.h": "c",
+        "timetask.h": "c",
+        "hallayer.h": "c",
+        "glovarredef.h": "c"
     }
 }

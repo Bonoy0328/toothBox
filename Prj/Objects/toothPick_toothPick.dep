@@ -1,6 +1,6 @@
 Dependencies for Project 'toothPick', Target 'toothPick': (DO NOT MODIFY !)
 F (.\startup_hc32l110.s)(0x5F2386F7)(--cpu Cortex-M0+ -g --apcs=interwork -I.\RTE\_toothPick-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\HDSC\HC32L110\1.0.3\Device\Include--pd "__UVISION_VERSION SETA 525" --pd "_RTE_ SETA 1"--list .\listings\startup_hc32l110.lst --xref -o .\objects\startup_hc32l110.o --depend .\objects\startup_hc32l110.d)
-F (.\mcu\common\system_hc32l110.c)(0x5ED73C20)(--c99 --gnu -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I .\driver\inc -I .\mcu\common -I .\source\inc -I .\profile-I.\RTE\_toothPick-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\HDSC\HC32L110\1.0.3\Device\Include-D__UVISION_VERSION="525" -D_RTE_-o .\objects\system_hc32l110.o --omf_browse .\objects\system_hc32l110.crf --depend .\objects\system_hc32l110.d)
+F (.\mcu\common\system_hc32l110.c)(0x5ED73C20)(--c99 --gnu -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I .\driver\inc -I .\mcu\common -I .\source\inc -I .\profile -I .\freeRTos\inc -I .\freeRTos\port\RVDS\ARM_CM0-I.\RTE\_toothPick-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\HDSC\HC32L110\1.0.3\Device\Include-D__UVISION_VERSION="525" -D_RTE_-o .\objects\system_hc32l110.o --omf_browse .\objects\system_hc32l110.crf --depend .\objects\system_hc32l110.d)
 I (mcu\common\base_types.h)(0x5ECDF70F)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5D9AD218)
@@ -18,9 +18,9 @@ I (.\driver\inc\clk.h)(0x5ECDF70F)
 I (.\driver\inc\interrupts_hc32l110.h)(0x5ECDF70F)
 I (.\driver\inc\gpio.h)(0x5ECDF837)
 I (.\source\inc\ddl_device.h)(0x5F2386F7)
-F (.\source\main.c)(0x616C045A)(--c99 --gnu -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I .\driver\inc -I .\mcu\common -I .\source\inc -I .\profile-I.\RTE\_toothPick-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\HDSC\HC32L110\1.0.3\Device\Include-D__UVISION_VERSION="525" -D_RTE_-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
-I (.\profile\GloVarDef.h)(0x614EF432)
-I (.\profile\GloTypeDef.h)(0x614EF441)
+F (.\source\main.c)(0x617922CB)(--c99 --gnu -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I .\driver\inc -I .\mcu\common -I .\source\inc -I .\profile -I .\freeRTos\inc -I .\freeRTos\port\RVDS\ARM_CM0-I.\RTE\_toothPick-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\HDSC\HC32L110\1.0.3\Device\Include-D__UVISION_VERSION="525" -D_RTE_-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+I (.\profile\GloVarDef.h)(0x61791199)
+I (.\profile\GloTypeDef.h)(0x6179117E)
 I (.\driver\inc\ddl.h)(0x5ECDF70F)
 I (.\mcu\common\base_types.h)(0x5ECDF70F)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
@@ -38,10 +38,25 @@ I (.\driver\inc\clk.h)(0x5ECDF70F)
 I (.\driver\inc\interrupts_hc32l110.h)(0x5ECDF70F)
 I (.\driver\inc\gpio.h)(0x5ECDF837)
 I (.\source\inc\ddl_device.h)(0x5F2386F7)
-I (.\profile\MacDef.h)(0x616BF2A2)
+I (.\profile\MacDef.h)(0x6178FE7D)
+I (.\source\inc\timeTask.h)(0x61790EDA)
+I (.\source\inc\halLayer.h)(0x61790EFE)
+I (.\profile\GloVarReDef.h)(0x617911A0)
 I (.\driver\inc\bt.h)(0x5ECDF70F)
 I (.\driver\inc\lpuart.h)(0x5ECDF70F)
-F (.\driver\src\ddl.c)(0x616C0443)(--c99 --gnu -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I .\driver\inc -I .\mcu\common -I .\source\inc -I .\profile-I.\RTE\_toothPick-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\HDSC\HC32L110\1.0.3\Device\Include-D__UVISION_VERSION="525" -D_RTE_-o .\objects\ddl.o --omf_browse .\objects\ddl.crf --depend .\objects\ddl.d)
+I (.\driver\inc\adc.h)(0x5ECDF70F)
+I (.\freeRTos\inc\FreeRTOS.h)(0x60FAEFBA)
+I (.\profile\FreeRTOSConfig.h)(0x617924BB)
+I (.\freeRTos\inc\projdefs.h)(0x60FAEFBA)
+I (.\freeRTos\inc\portable.h)(0x60FAEFBA)
+I (.\freeRTos\inc\deprecated_definitions.h)(0x60FAEFBA)
+I (.\freeRTos\port\RVDS\ARM_CM0\portmacro.h)(0x60FAEFBA)
+I (.\freeRTos\inc\mpu_wrappers.h)(0x60FAEFBA)
+F (.\source\timeTask.c)(0x61791115)(--c99 --gnu -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I .\driver\inc -I .\mcu\common -I .\source\inc -I .\profile -I .\freeRTos\inc -I .\freeRTos\port\RVDS\ARM_CM0-I.\RTE\_toothPick-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\HDSC\HC32L110\1.0.3\Device\Include-D__UVISION_VERSION="525" -D_RTE_-o .\objects\timetask.o --omf_browse .\objects\timetask.crf --depend .\objects\timetask.d)
+I (.\source\inc\timeTask.h)(0x61790EDA)
+I (.\source\inc\halLayer.h)(0x61790EFE)
+I (.\profile\GloVarReDef.h)(0x617911A0)
+I (.\profile\GloTypeDef.h)(0x6179117E)
 I (.\driver\inc\ddl.h)(0x5ECDF70F)
 I (.\mcu\common\base_types.h)(0x5ECDF70F)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
@@ -59,7 +74,14 @@ I (.\driver\inc\clk.h)(0x5ECDF70F)
 I (.\driver\inc\interrupts_hc32l110.h)(0x5ECDF70F)
 I (.\driver\inc\gpio.h)(0x5ECDF837)
 I (.\source\inc\ddl_device.h)(0x5F2386F7)
-F (.\driver\src\interrupts_hc32l110.c)(0x5ECDF70F)(--c99 --gnu -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I .\driver\inc -I .\mcu\common -I .\source\inc -I .\profile-I.\RTE\_toothPick-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\HDSC\HC32L110\1.0.3\Device\Include-D__UVISION_VERSION="525" -D_RTE_-o .\objects\interrupts_hc32l110.o --omf_browse .\objects\interrupts_hc32l110.crf --depend .\objects\interrupts_hc32l110.d)
+I (.\profile\MacDef.h)(0x6178FE7D)
+I (.\driver\inc\bt.h)(0x5ECDF70F)
+I (.\driver\inc\lpuart.h)(0x5ECDF70F)
+I (.\driver\inc\adc.h)(0x5ECDF70F)
+F (.\source\halLayer.c)(0x61791542)(--c99 --gnu -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I .\driver\inc -I .\mcu\common -I .\source\inc -I .\profile -I .\freeRTos\inc -I .\freeRTos\port\RVDS\ARM_CM0-I.\RTE\_toothPick-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\HDSC\HC32L110\1.0.3\Device\Include-D__UVISION_VERSION="525" -D_RTE_-o .\objects\hallayer.o --omf_browse .\objects\hallayer.crf --depend .\objects\hallayer.d)
+I (.\source\inc\halLayer.h)(0x61790EFE)
+I (.\profile\GloVarReDef.h)(0x617911A0)
+I (.\profile\GloTypeDef.h)(0x6179117E)
 I (.\driver\inc\ddl.h)(0x5ECDF70F)
 I (.\mcu\common\base_types.h)(0x5ECDF70F)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
@@ -77,7 +99,47 @@ I (.\driver\inc\clk.h)(0x5ECDF70F)
 I (.\driver\inc\interrupts_hc32l110.h)(0x5ECDF70F)
 I (.\driver\inc\gpio.h)(0x5ECDF837)
 I (.\source\inc\ddl_device.h)(0x5F2386F7)
-F (.\driver\src\clk.c)(0x5ECDF915)(--c99 --gnu -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I .\driver\inc -I .\mcu\common -I .\source\inc -I .\profile-I.\RTE\_toothPick-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\HDSC\HC32L110\1.0.3\Device\Include-D__UVISION_VERSION="525" -D_RTE_-o .\objects\clk.o --omf_browse .\objects\clk.crf --depend .\objects\clk.d)
+I (.\profile\MacDef.h)(0x6178FE7D)
+I (.\driver\inc\bt.h)(0x5ECDF70F)
+I (.\driver\inc\lpuart.h)(0x5ECDF70F)
+I (.\driver\inc\adc.h)(0x5ECDF70F)
+F (.\driver\src\ddl.c)(0x616C0443)(--c99 --gnu -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I .\driver\inc -I .\mcu\common -I .\source\inc -I .\profile -I .\freeRTos\inc -I .\freeRTos\port\RVDS\ARM_CM0-I.\RTE\_toothPick-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\HDSC\HC32L110\1.0.3\Device\Include-D__UVISION_VERSION="525" -D_RTE_-o .\objects\ddl.o --omf_browse .\objects\ddl.crf --depend .\objects\ddl.d)
+I (.\driver\inc\ddl.h)(0x5ECDF70F)
+I (.\mcu\common\base_types.h)(0x5ECDF70F)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5D9AD218)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5D9AD218)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5D9AD212)
+I (.\mcu\common\hc32l110.h)(0x5ECDF70F)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\core_cm0plus.h)(0x5D2590B6)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_version.h)(0x5D2590B6)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5D2590B6)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5D2590B6)
+I (.\mcu\common\system_hc32l110.h)(0x5ED73BA1)
+I (.\driver\inc\clk.h)(0x5ECDF70F)
+I (.\driver\inc\interrupts_hc32l110.h)(0x5ECDF70F)
+I (.\driver\inc\gpio.h)(0x5ECDF837)
+I (.\source\inc\ddl_device.h)(0x5F2386F7)
+F (.\driver\src\interrupts_hc32l110.c)(0x5ECDF70F)(--c99 --gnu -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I .\driver\inc -I .\mcu\common -I .\source\inc -I .\profile -I .\freeRTos\inc -I .\freeRTos\port\RVDS\ARM_CM0-I.\RTE\_toothPick-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\HDSC\HC32L110\1.0.3\Device\Include-D__UVISION_VERSION="525" -D_RTE_-o .\objects\interrupts_hc32l110.o --omf_browse .\objects\interrupts_hc32l110.crf --depend .\objects\interrupts_hc32l110.d)
+I (.\driver\inc\ddl.h)(0x5ECDF70F)
+I (.\mcu\common\base_types.h)(0x5ECDF70F)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5D9AD218)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5D9AD218)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5D9AD212)
+I (.\mcu\common\hc32l110.h)(0x5ECDF70F)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\core_cm0plus.h)(0x5D2590B6)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_version.h)(0x5D2590B6)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5D2590B6)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5D2590B6)
+I (.\mcu\common\system_hc32l110.h)(0x5ED73BA1)
+I (.\driver\inc\clk.h)(0x5ECDF70F)
+I (.\driver\inc\interrupts_hc32l110.h)(0x5ECDF70F)
+I (.\driver\inc\gpio.h)(0x5ECDF837)
+I (.\source\inc\ddl_device.h)(0x5F2386F7)
+F (.\driver\src\clk.c)(0x5ECDF915)(--c99 --gnu -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I .\driver\inc -I .\mcu\common -I .\source\inc -I .\profile -I .\freeRTos\inc -I .\freeRTos\port\RVDS\ARM_CM0-I.\RTE\_toothPick-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\HDSC\HC32L110\1.0.3\Device\Include-D__UVISION_VERSION="525" -D_RTE_-o .\objects\clk.o --omf_browse .\objects\clk.crf --depend .\objects\clk.d)
 I (.\driver\inc\clk.h)(0x5ECDF70F)
 I (.\driver\inc\ddl.h)(0x5ECDF70F)
 I (.\mcu\common\base_types.h)(0x5ECDF70F)
@@ -95,7 +157,7 @@ I (.\mcu\common\system_hc32l110.h)(0x5ED73BA1)
 I (.\driver\inc\gpio.h)(0x5ECDF837)
 I (.\driver\inc\interrupts_hc32l110.h)(0x5ECDF70F)
 I (.\source\inc\ddl_device.h)(0x5F2386F7)
-F (.\driver\src\gpio.c)(0x614EF307)(--c99 --gnu -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I .\driver\inc -I .\mcu\common -I .\source\inc -I .\profile-I.\RTE\_toothPick-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\HDSC\HC32L110\1.0.3\Device\Include-D__UVISION_VERSION="525" -D_RTE_-o .\objects\gpio.o --omf_browse .\objects\gpio.crf --depend .\objects\gpio.d)
+F (.\driver\src\gpio.c)(0x614EF307)(--c99 --gnu -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I .\driver\inc -I .\mcu\common -I .\source\inc -I .\profile -I .\freeRTos\inc -I .\freeRTos\port\RVDS\ARM_CM0-I.\RTE\_toothPick-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\HDSC\HC32L110\1.0.3\Device\Include-D__UVISION_VERSION="525" -D_RTE_-o .\objects\gpio.o --omf_browse .\objects\gpio.crf --depend .\objects\gpio.d)
 I (.\driver\inc\gpio.h)(0x5ECDF837)
 I (.\driver\inc\ddl.h)(0x5ECDF70F)
 I (.\mcu\common\base_types.h)(0x5ECDF70F)
@@ -113,7 +175,7 @@ I (.\mcu\common\system_hc32l110.h)(0x5ED73BA1)
 I (.\driver\inc\clk.h)(0x5ECDF70F)
 I (.\driver\inc\interrupts_hc32l110.h)(0x5ECDF70F)
 I (.\source\inc\ddl_device.h)(0x5F2386F7)
-F (.\driver\src\adc.c)(0x5ECDF70F)(--c99 --gnu -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I .\driver\inc -I .\mcu\common -I .\source\inc -I .\profile-I.\RTE\_toothPick-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\HDSC\HC32L110\1.0.3\Device\Include-D__UVISION_VERSION="525" -D_RTE_-o .\objects\adc.o --omf_browse .\objects\adc.crf --depend .\objects\adc.d)
+F (.\driver\src\adc.c)(0x5ECDF70F)(--c99 --gnu -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I .\driver\inc -I .\mcu\common -I .\source\inc -I .\profile -I .\freeRTos\inc -I .\freeRTos\port\RVDS\ARM_CM0-I.\RTE\_toothPick-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\HDSC\HC32L110\1.0.3\Device\Include-D__UVISION_VERSION="525" -D_RTE_-o .\objects\adc.o --omf_browse .\objects\adc.crf --depend .\objects\adc.d)
 I (.\driver\inc\adc.h)(0x5ECDF70F)
 I (.\driver\inc\ddl.h)(0x5ECDF70F)
 I (.\mcu\common\base_types.h)(0x5ECDF70F)
@@ -132,7 +194,7 @@ I (.\driver\inc\clk.h)(0x5ECDF70F)
 I (.\driver\inc\interrupts_hc32l110.h)(0x5ECDF70F)
 I (.\driver\inc\gpio.h)(0x5ECDF837)
 I (.\source\inc\ddl_device.h)(0x5F2386F7)
-F (.\driver\src\uart.c)(0x5ECDF70F)(--c99 --gnu -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I .\driver\inc -I .\mcu\common -I .\source\inc -I .\profile-I.\RTE\_toothPick-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\HDSC\HC32L110\1.0.3\Device\Include-D__UVISION_VERSION="525" -D_RTE_-o .\objects\uart.o --omf_browse .\objects\uart.crf --depend .\objects\uart.d)
+F (.\driver\src\uart.c)(0x5ECDF70F)(--c99 --gnu -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I .\driver\inc -I .\mcu\common -I .\source\inc -I .\profile -I .\freeRTos\inc -I .\freeRTos\port\RVDS\ARM_CM0-I.\RTE\_toothPick-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\HDSC\HC32L110\1.0.3\Device\Include-D__UVISION_VERSION="525" -D_RTE_-o .\objects\uart.o --omf_browse .\objects\uart.crf --depend .\objects\uart.d)
 I (.\driver\inc\uart.h)(0x5ECDF70F)
 I (.\driver\inc\ddl.h)(0x5ECDF70F)
 I (.\mcu\common\base_types.h)(0x5ECDF70F)
@@ -151,7 +213,7 @@ I (.\driver\inc\clk.h)(0x5ECDF70F)
 I (.\driver\inc\interrupts_hc32l110.h)(0x5ECDF70F)
 I (.\driver\inc\gpio.h)(0x5ECDF837)
 I (.\source\inc\ddl_device.h)(0x5F2386F7)
-F (.\driver\src\bt.c)(0x5ECDF70F)(--c99 --gnu -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I .\driver\inc -I .\mcu\common -I .\source\inc -I .\profile-I.\RTE\_toothPick-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\HDSC\HC32L110\1.0.3\Device\Include-D__UVISION_VERSION="525" -D_RTE_-o .\objects\bt.o --omf_browse .\objects\bt.crf --depend .\objects\bt.d)
+F (.\driver\src\bt.c)(0x5ECDF70F)(--c99 --gnu -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I .\driver\inc -I .\mcu\common -I .\source\inc -I .\profile -I .\freeRTos\inc -I .\freeRTos\port\RVDS\ARM_CM0-I.\RTE\_toothPick-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\HDSC\HC32L110\1.0.3\Device\Include-D__UVISION_VERSION="525" -D_RTE_-o .\objects\bt.o --omf_browse .\objects\bt.crf --depend .\objects\bt.d)
 I (.\driver\inc\bt.h)(0x5ECDF70F)
 I (.\driver\inc\ddl.h)(0x5ECDF70F)
 I (.\mcu\common\base_types.h)(0x5ECDF70F)
@@ -170,7 +232,7 @@ I (.\driver\inc\clk.h)(0x5ECDF70F)
 I (.\driver\inc\interrupts_hc32l110.h)(0x5ECDF70F)
 I (.\driver\inc\gpio.h)(0x5ECDF837)
 I (.\source\inc\ddl_device.h)(0x5F2386F7)
-F (.\driver\src\lpuart.c)(0x5ECDF70F)(--c99 --gnu -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I .\driver\inc -I .\mcu\common -I .\source\inc -I .\profile-I.\RTE\_toothPick-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\HDSC\HC32L110\1.0.3\Device\Include-D__UVISION_VERSION="525" -D_RTE_-o .\objects\lpuart.o --omf_browse .\objects\lpuart.crf --depend .\objects\lpuart.d)
+F (.\driver\src\lpuart.c)(0x5ECDF70F)(--c99 --gnu -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I .\driver\inc -I .\mcu\common -I .\source\inc -I .\profile -I .\freeRTos\inc -I .\freeRTos\port\RVDS\ARM_CM0-I.\RTE\_toothPick-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\HDSC\HC32L110\1.0.3\Device\Include-D__UVISION_VERSION="525" -D_RTE_-o .\objects\lpuart.o --omf_browse .\objects\lpuart.crf --depend .\objects\lpuart.d)
 I (.\driver\inc\lpuart.h)(0x5ECDF70F)
 I (.\driver\inc\ddl.h)(0x5ECDF70F)
 I (.\mcu\common\base_types.h)(0x5ECDF70F)
@@ -189,7 +251,133 @@ I (.\driver\inc\clk.h)(0x5ECDF70F)
 I (.\driver\inc\interrupts_hc32l110.h)(0x5ECDF70F)
 I (.\driver\inc\gpio.h)(0x5ECDF837)
 I (.\source\inc\ddl_device.h)(0x5F2386F7)
-F (.\profile\MacDef.h)(0x616BF2A2)()
-F (.\profile\GloVarReDef.h)(0x614EF439)()
-F (.\profile\GloVarDef.h)(0x614EF432)()
-F (.\profile\GloTypeDef.h)(0x614EF441)()
+F (.\profile\MacDef.h)(0x6178FE7D)()
+F (.\profile\GloVarReDef.h)(0x617911A0)()
+F (.\profile\GloVarDef.h)(0x61791199)()
+F (.\profile\GloTypeDef.h)(0x6179117E)()
+F (.\profile\FreeRTOSConfig.h)(0x617924BB)()
+F (.\freeRTos\croutine.c)(0x60FAEFBA)(--c99 --gnu -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I .\driver\inc -I .\mcu\common -I .\source\inc -I .\profile -I .\freeRTos\inc -I .\freeRTos\port\RVDS\ARM_CM0-I.\RTE\_toothPick-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\HDSC\HC32L110\1.0.3\Device\Include-D__UVISION_VERSION="525" -D_RTE_-o .\objects\croutine.o --omf_browse .\objects\croutine.crf --depend .\objects\croutine.d)
+I (.\freeRTos\inc\FreeRTOS.h)(0x60FAEFBA)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5D9AD218)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (.\profile\FreeRTOSConfig.h)(0x617924BB)
+I (.\freeRTos\inc\projdefs.h)(0x60FAEFBA)
+I (.\freeRTos\inc\portable.h)(0x60FAEFBA)
+I (.\freeRTos\inc\deprecated_definitions.h)(0x60FAEFBA)
+I (.\freeRTos\port\RVDS\ARM_CM0\portmacro.h)(0x60FAEFBA)
+I (.\freeRTos\inc\mpu_wrappers.h)(0x60FAEFBA)
+I (.\freeRTos\inc\task.h)(0x60FAEFBA)
+I (.\freeRTos\inc\list.h)(0x60FAEFBA)
+I (.\freeRTos\inc\croutine.h)(0x60FAEFBA)
+F (.\freeRTos\event_groups.c)(0x60FAEFBA)(--c99 --gnu -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I .\driver\inc -I .\mcu\common -I .\source\inc -I .\profile -I .\freeRTos\inc -I .\freeRTos\port\RVDS\ARM_CM0-I.\RTE\_toothPick-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\HDSC\HC32L110\1.0.3\Device\Include-D__UVISION_VERSION="525" -D_RTE_-o .\objects\event_groups.o --omf_browse .\objects\event_groups.crf --depend .\objects\event_groups.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5D9AD21A)
+I (.\freeRTos\inc\FreeRTOS.h)(0x60FAEFBA)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5D9AD218)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (.\profile\FreeRTOSConfig.h)(0x617924BB)
+I (.\freeRTos\inc\projdefs.h)(0x60FAEFBA)
+I (.\freeRTos\inc\portable.h)(0x60FAEFBA)
+I (.\freeRTos\inc\deprecated_definitions.h)(0x60FAEFBA)
+I (.\freeRTos\port\RVDS\ARM_CM0\portmacro.h)(0x60FAEFBA)
+I (.\freeRTos\inc\mpu_wrappers.h)(0x60FAEFBA)
+I (.\freeRTos\inc\task.h)(0x60FAEFBA)
+I (.\freeRTos\inc\list.h)(0x60FAEFBA)
+I (.\freeRTos\inc\timers.h)(0x60FAEFBA)
+I (.\freeRTos\inc\event_groups.h)(0x60FAEFBA)
+F (.\freeRTos\list.c)(0x60FAEFBA)(--c99 --gnu -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I .\driver\inc -I .\mcu\common -I .\source\inc -I .\profile -I .\freeRTos\inc -I .\freeRTos\port\RVDS\ARM_CM0-I.\RTE\_toothPick-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\HDSC\HC32L110\1.0.3\Device\Include-D__UVISION_VERSION="525" -D_RTE_-o .\objects\list.o --omf_browse .\objects\list.crf --depend .\objects\list.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5D9AD21A)
+I (.\freeRTos\inc\FreeRTOS.h)(0x60FAEFBA)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5D9AD218)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (.\profile\FreeRTOSConfig.h)(0x617924BB)
+I (.\freeRTos\inc\projdefs.h)(0x60FAEFBA)
+I (.\freeRTos\inc\portable.h)(0x60FAEFBA)
+I (.\freeRTos\inc\deprecated_definitions.h)(0x60FAEFBA)
+I (.\freeRTos\port\RVDS\ARM_CM0\portmacro.h)(0x60FAEFBA)
+I (.\freeRTos\inc\mpu_wrappers.h)(0x60FAEFBA)
+I (.\freeRTos\inc\list.h)(0x60FAEFBA)
+F (.\freeRTos\queue.c)(0x60FAEFBA)(--c99 --gnu -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I .\driver\inc -I .\mcu\common -I .\source\inc -I .\profile -I .\freeRTos\inc -I .\freeRTos\port\RVDS\ARM_CM0-I.\RTE\_toothPick-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\HDSC\HC32L110\1.0.3\Device\Include-D__UVISION_VERSION="525" -D_RTE_-o .\objects\queue.o --omf_browse .\objects\queue.crf --depend .\objects\queue.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5D9AD21A)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5D9AD218)
+I (.\freeRTos\inc\FreeRTOS.h)(0x60FAEFBA)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5D9AD218)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (.\profile\FreeRTOSConfig.h)(0x617924BB)
+I (.\freeRTos\inc\projdefs.h)(0x60FAEFBA)
+I (.\freeRTos\inc\portable.h)(0x60FAEFBA)
+I (.\freeRTos\inc\deprecated_definitions.h)(0x60FAEFBA)
+I (.\freeRTos\port\RVDS\ARM_CM0\portmacro.h)(0x60FAEFBA)
+I (.\freeRTos\inc\mpu_wrappers.h)(0x60FAEFBA)
+I (.\freeRTos\inc\task.h)(0x60FAEFBA)
+I (.\freeRTos\inc\list.h)(0x60FAEFBA)
+I (.\freeRTos\inc\queue.h)(0x60FAEFBA)
+F (.\freeRTos\stream_buffer.c)(0x60FAEFBA)(--c99 --gnu -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I .\driver\inc -I .\mcu\common -I .\source\inc -I .\profile -I .\freeRTos\inc -I .\freeRTos\port\RVDS\ARM_CM0-I.\RTE\_toothPick-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\HDSC\HC32L110\1.0.3\Device\Include-D__UVISION_VERSION="525" -D_RTE_-o .\objects\stream_buffer.o --omf_browse .\objects\stream_buffer.crf --depend .\objects\stream_buffer.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5D9AD218)
+I (.\freeRTos\inc\FreeRTOS.h)(0x60FAEFBA)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5D9AD218)
+I (.\profile\FreeRTOSConfig.h)(0x617924BB)
+I (.\freeRTos\inc\projdefs.h)(0x60FAEFBA)
+I (.\freeRTos\inc\portable.h)(0x60FAEFBA)
+I (.\freeRTos\inc\deprecated_definitions.h)(0x60FAEFBA)
+I (.\freeRTos\port\RVDS\ARM_CM0\portmacro.h)(0x60FAEFBA)
+I (.\freeRTos\inc\mpu_wrappers.h)(0x60FAEFBA)
+I (.\freeRTos\inc\task.h)(0x60FAEFBA)
+I (.\freeRTos\inc\list.h)(0x60FAEFBA)
+I (.\freeRTos\inc\stream_buffer.h)(0x60FAEFBA)
+F (.\freeRTos\tasks.c)(0x60FAEFBA)(--c99 --gnu -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I .\driver\inc -I .\mcu\common -I .\source\inc -I .\profile -I .\freeRTos\inc -I .\freeRTos\port\RVDS\ARM_CM0-I.\RTE\_toothPick-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\HDSC\HC32L110\1.0.3\Device\Include-D__UVISION_VERSION="525" -D_RTE_-o .\objects\tasks.o --omf_browse .\objects\tasks.crf --depend .\objects\tasks.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5D9AD21A)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5D9AD218)
+I (.\freeRTos\inc\FreeRTOS.h)(0x60FAEFBA)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5D9AD218)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (.\profile\FreeRTOSConfig.h)(0x617924BB)
+I (.\freeRTos\inc\projdefs.h)(0x60FAEFBA)
+I (.\freeRTos\inc\portable.h)(0x60FAEFBA)
+I (.\freeRTos\inc\deprecated_definitions.h)(0x60FAEFBA)
+I (.\freeRTos\port\RVDS\ARM_CM0\portmacro.h)(0x60FAEFBA)
+I (.\freeRTos\inc\mpu_wrappers.h)(0x60FAEFBA)
+I (.\freeRTos\inc\task.h)(0x60FAEFBA)
+I (.\freeRTos\inc\list.h)(0x60FAEFBA)
+I (.\freeRTos\inc\timers.h)(0x60FAEFBA)
+I (.\freeRTos\inc\stack_macros.h)(0x60FAEFBA)
+F (.\freeRTos\timers.c)(0x60FAEFBA)(--c99 --gnu -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I .\driver\inc -I .\mcu\common -I .\source\inc -I .\profile -I .\freeRTos\inc -I .\freeRTos\port\RVDS\ARM_CM0-I.\RTE\_toothPick-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\HDSC\HC32L110\1.0.3\Device\Include-D__UVISION_VERSION="525" -D_RTE_-o .\objects\timers.o --omf_browse .\objects\timers.crf --depend .\objects\timers.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5D9AD21A)
+I (.\freeRTos\inc\FreeRTOS.h)(0x60FAEFBA)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5D9AD218)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (.\profile\FreeRTOSConfig.h)(0x617924BB)
+I (.\freeRTos\inc\projdefs.h)(0x60FAEFBA)
+I (.\freeRTos\inc\portable.h)(0x60FAEFBA)
+I (.\freeRTos\inc\deprecated_definitions.h)(0x60FAEFBA)
+I (.\freeRTos\port\RVDS\ARM_CM0\portmacro.h)(0x60FAEFBA)
+I (.\freeRTos\inc\mpu_wrappers.h)(0x60FAEFBA)
+I (.\freeRTos\inc\task.h)(0x60FAEFBA)
+I (.\freeRTos\inc\list.h)(0x60FAEFBA)
+I (.\freeRTos\inc\queue.h)(0x60FAEFBA)
+I (.\freeRTos\inc\timers.h)(0x60FAEFBA)
+F (.\freeRTos\port\MemMang\heap_4.c)(0x6179246F)(--c99 --gnu -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I .\driver\inc -I .\mcu\common -I .\source\inc -I .\profile -I .\freeRTos\inc -I .\freeRTos\port\RVDS\ARM_CM0-I.\RTE\_toothPick-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\HDSC\HC32L110\1.0.3\Device\Include-D__UVISION_VERSION="525" -D_RTE_-o .\objects\heap_4.o --omf_browse .\objects\heap_4.crf --depend .\objects\heap_4.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5D9AD21A)
+I (.\freeRTos\inc\FreeRTOS.h)(0x60FAEFBA)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5D9AD218)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (.\profile\FreeRTOSConfig.h)(0x617924BB)
+I (.\freeRTos\inc\projdefs.h)(0x60FAEFBA)
+I (.\freeRTos\inc\portable.h)(0x60FAEFBA)
+I (.\freeRTos\inc\deprecated_definitions.h)(0x60FAEFBA)
+I (.\freeRTos\port\RVDS\ARM_CM0\portmacro.h)(0x60FAEFBA)
+I (.\freeRTos\inc\mpu_wrappers.h)(0x60FAEFBA)
+I (.\freeRTos\inc\task.h)(0x60FAEFBA)
+I (.\freeRTos\inc\list.h)(0x60FAEFBA)
+F (.\freeRTos\port\RVDS\ARM_CM0\port.c)(0x60FAEFBA)(--c99 --gnu -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I .\driver\inc -I .\mcu\common -I .\source\inc -I .\profile -I .\freeRTos\inc -I .\freeRTos\port\RVDS\ARM_CM0-I.\RTE\_toothPick-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\HDSC\HC32L110\1.0.3\Device\Include-D__UVISION_VERSION="525" -D_RTE_-o .\objects\port.o --omf_browse .\objects\port.crf --depend .\objects\port.d)
+I (.\freeRTos\inc\FreeRTOS.h)(0x60FAEFBA)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5D9AD218)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (.\profile\FreeRTOSConfig.h)(0x617924BB)
+I (.\freeRTos\inc\projdefs.h)(0x60FAEFBA)
+I (.\freeRTos\inc\portable.h)(0x60FAEFBA)
+I (.\freeRTos\inc\deprecated_definitions.h)(0x60FAEFBA)
+I (.\freeRTos\port\RVDS\ARM_CM0\portmacro.h)(0x60FAEFBA)
+I (.\freeRTos\inc\mpu_wrappers.h)(0x60FAEFBA)
+I (.\freeRTos\inc\task.h)(0x60FAEFBA)
+I (.\freeRTos\inc\list.h)(0x60FAEFBA)
