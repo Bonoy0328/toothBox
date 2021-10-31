@@ -187,7 +187,7 @@
             <hadIRAM2>0</hadIRAM2>
             <hadIROM2>0</hadIROM2>
             <StupSel>8</StupSel>
-            <useUlib>0</useUlib>
+            <useUlib>1</useUlib>
             <EndSel>0</EndSel>
             <uLtcg>0</uLtcg>
             <nSecure>0</nSecure>
@@ -311,7 +311,7 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>1</Optim>
+            <Optim>7</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>1</OneElfS>
@@ -320,14 +320,14 @@
             <PlainCh>0</PlainCh>
             <Ropi>0</Ropi>
             <Rwpi>0</Rwpi>
-            <wLevel>2</wLevel>
+            <wLevel>3</wLevel>
             <uThumb>0</uThumb>
             <uSurpInc>0</uSurpInc>
             <uC99>1</uC99>
             <uGnu>1</uGnu>
             <useXO>0</useXO>
-            <v6Lang>1</v6Lang>
-            <v6LangP>1</v6LangP>
+            <v6Lang>3</v6Lang>
+            <v6LangP>3</v6LangP>
             <vShortEn>1</vShortEn>
             <vShortWch>1</vShortWch>
             <v6Lto>0</v6Lto>
@@ -337,7 +337,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>.\driver\inc;.\mcu\common;.\source\inc;.\profile;.\freeRTos\inc;.\freeRTos\port\RVDS\ARM_CM0</IncludePath>
+              <IncludePath>.\driver\inc;.\mcu\common;.\source\inc;.\profile;.\freeRTos\inc;.\freeRTos\port\RVDS\ARM_CM0;.\freeRTos\port\MemMang</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -442,11 +442,6 @@
               <FilePath>.\driver\src\adc.c</FilePath>
             </File>
             <File>
-              <FileName>uart.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\driver\src\uart.c</FilePath>
-            </File>
-            <File>
               <FileName>bt.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\driver\src\bt.c</FilePath>
@@ -492,16 +487,6 @@
           <GroupName>freeRTos</GroupName>
           <Files>
             <File>
-              <FileName>croutine.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\freeRTos\croutine.c</FilePath>
-            </File>
-            <File>
-              <FileName>event_groups.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\freeRTos\event_groups.c</FilePath>
-            </File>
-            <File>
               <FileName>list.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\freeRTos\list.c</FilePath>
@@ -510,11 +495,6 @@
               <FileName>queue.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\freeRTos\queue.c</FilePath>
-            </File>
-            <File>
-              <FileName>stream_buffer.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\freeRTos\stream_buffer.c</FilePath>
             </File>
             <File>
               <FileName>tasks.c</FileName>
@@ -535,6 +515,21 @@
               <FileName>port.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\freeRTos\port\RVDS\ARM_CM0\port.c</FilePath>
+            </File>
+            <File>
+              <FileName>croutine.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\freeRTos\croutine.c</FilePath>
+            </File>
+            <File>
+              <FileName>event_groups.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\freeRTos\event_groups.c</FilePath>
+            </File>
+            <File>
+              <FileName>stream_buffer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\freeRTos\stream_buffer.c</FilePath>
             </File>
           </Files>
         </Group>

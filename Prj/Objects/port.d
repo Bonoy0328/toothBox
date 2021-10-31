@@ -3,6 +3,11 @@
 .\objects\port.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 .\objects\port.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\port.o: .\profile\FreeRTOSConfig.h
+.\objects\port.o: .\mcu\common\hc32l110.h
+.\objects\port.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\core_cm0plus.h
+.\objects\port.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_version.h
+.\objects\port.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_compiler.h
+.\objects\port.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_armcc.h
 .\objects\port.o: .\freeRTos\inc\projdefs.h
 .\objects\port.o: .\freeRTos\inc\portable.h
 .\objects\port.o: .\freeRTos\inc\deprecated_definitions.h

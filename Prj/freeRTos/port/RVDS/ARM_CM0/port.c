@@ -213,6 +213,7 @@ BaseType_t xPortStartScheduler( void )
     /* Start the timer that generates the tick ISR.  Interrupts are disabled
      * here already. */
     vPortSetupTimerInterrupt();
+		// SysTick_Config(configCPU_CLOCK_HZ/configTICK_RATE_HZ);
 
     /* Initialise the critical nesting count ready for the first task. */
     uxCriticalNesting = 0;

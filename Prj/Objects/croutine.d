@@ -3,6 +3,11 @@
 .\objects\croutine.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 .\objects\croutine.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\croutine.o: .\profile\FreeRTOSConfig.h
+.\objects\croutine.o: .\mcu\common\hc32l110.h
+.\objects\croutine.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\core_cm0plus.h
+.\objects\croutine.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_version.h
+.\objects\croutine.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_compiler.h
+.\objects\croutine.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_armcc.h
 .\objects\croutine.o: .\freeRTos\inc\projdefs.h
 .\objects\croutine.o: .\freeRTos\inc\portable.h
 .\objects\croutine.o: .\freeRTos\inc\deprecated_definitions.h

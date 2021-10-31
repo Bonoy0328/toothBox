@@ -9,13 +9,13 @@
                 "c:\\Users\\bonoy\\Desktop\\workspace2\\toothBox\\Prj\\profile",
                 "c:\\Users\\bonoy\\Desktop\\workspace2\\toothBox\\Prj\\freeRTos\\inc",
                 "c:\\Users\\bonoy\\Desktop\\workspace2\\toothBox\\Prj\\freeRTos\\port\\RVDS\\ARM_CM0",
+                "c:\\Users\\bonoy\\Desktop\\workspace2\\toothBox\\Prj\\freeRTos\\port\\MemMang",
                 "C:\\Keil_v5\\ARM\\ARMCC\\include",
                 "C:\\Keil_v5\\ARM\\ARMCC\\include\\rw",
                 "c:\\Users\\bonoy\\Desktop\\workspace2\\toothBox\\Prj",
                 "c:\\Users\\bonoy\\Desktop\\workspace2\\toothBox\\Prj\\source",
                 "c:\\Users\\bonoy\\Desktop\\workspace2\\toothBox\\Prj\\driver\\src",
-                "c:\\Users\\bonoy\\Desktop\\workspace2\\toothBox\\Prj\\freeRTos",
-                "c:\\Users\\bonoy\\Desktop\\workspace2\\toothBox\\Prj\\freeRTos\\port\\MemMang"
+                "c:\\Users\\bonoy\\Desktop\\workspace2\\toothBox\\Prj\\freeRTos"
             ],
             "defines": [
                 "__CC_ARM",

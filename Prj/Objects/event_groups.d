@@ -4,6 +4,11 @@
 .\objects\event_groups.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 .\objects\event_groups.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\event_groups.o: .\profile\FreeRTOSConfig.h
+.\objects\event_groups.o: .\mcu\common\hc32l110.h
+.\objects\event_groups.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\core_cm0plus.h
+.\objects\event_groups.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_version.h
+.\objects\event_groups.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_compiler.h
+.\objects\event_groups.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_armcc.h
 .\objects\event_groups.o: .\freeRTos\inc\projdefs.h
 .\objects\event_groups.o: .\freeRTos\inc\portable.h
 .\objects\event_groups.o: .\freeRTos\inc\deprecated_definitions.h

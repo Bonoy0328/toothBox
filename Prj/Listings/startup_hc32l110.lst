@@ -215,8 +215,8 @@ ARM Macro Assembler    Page 4
   145 00000000                 IMPORT           __main
   146 00000000         
   147 00000000         ;reset NVIC if in rom debug
-  148 00000000 480C            LDR              R0, =0x20000000
-  149 00000002 4A0D            LDR              R2, =0x0
+  148 00000000 4809            LDR              R0, =0x20000000
+  149 00000002 4A0A            LDR              R2, =0x0
   150 00000004 2100            MOVS             R1, #0      ; for warning, 
   151 00000006 A100            ADD              R1, PC,#0   ; for A1609W, 
   152 00000008 4281            CMP              R1, R0
@@ -226,12 +226,12 @@ ARM Macro Assembler    Page 4
   156 0000000C 4402            ADD              R2, R0,R2
   157 0000000E         RAMCODE
   158 0000000E         ; reset Vector table address.
-  159 0000000E 480B            LDR              R0, =0xE000ED08
+  159 0000000E 4808            LDR              R0, =0xE000ED08
   160 00000010 6002            STR              R2, [R0]
   161 00000012         
-  162 00000012 480B            LDR              R0, =SystemInit
+  162 00000012 4808            LDR              R0, =SystemInit
   163 00000014 4780            BLX              R0
-  164 00000016 480B            LDR              R0, =__main
+  164 00000016 4808            LDR              R0, =__main
   165 00000018 4700            BX               R0
   166 0000001A                 ENDP
   167 0000001A         
@@ -400,38 +400,27 @@ ARM Macro Assembler    Page 7
   269 00000028         ; User Initial Stack & Heap
   270 00000028         
   271 00000028                 IF               :DEF:__MICROLIB
-  278 00000028         
-  279 00000028                 IMPORT           __use_two_region_memory
-  280 00000028                 EXPORT           __user_initial_stackheap
-  281 00000028         __user_initial_stackheap
-  282 00000028         
-  283 00000028 4807            LDR              R0, =  Heap_Mem
-  284 0000002A 4908            LDR              R1, =(Stack_Mem + Stack_Size)
-  285 0000002C 4A08            LDR              R2, = (Heap_Mem +  Heap_Size)
-  286 0000002E 4B09            LDR              R3, = Stack_Mem
-  287 00000030 4770            BX               LR
-  288 00000032         
-  289 00000032 00 00           ALIGN
-  290 00000034         
-  291 00000034                 ENDIF
-  292 00000034         
-  293 00000034         
-  294 00000034                 END
+  272 00000028         
+  273 00000028                 EXPORT           __initial_sp
+  274 00000028                 EXPORT           __heap_base
+  275 00000028                 EXPORT           __heap_limit
+  276 00000028         
+  277 00000028                 ELSE
+  291                          ENDIF
+  292 00000028         
+  293 00000028         
+  294 00000028                 END
               20000000 
               00000000 
               E000ED08 
               00000000 
               00000000 
-              00000000 
-              00000100 
-              00000100 
-              00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M0+ --apcs=inter
 work --depend=.\objects\startup_hc32l110.d -o.\objects\startup_hc32l110.o -I.\R
 TE\_toothPick -IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include -IC:\Kei
-l_v5\ARM\PACK\HDSC\HC32L110\1.0.3\Device\Include --predefine="__UVISION_VERSION
- SETA 525" --predefine="_RTE_ SETA 1" --list=.\listings\startup_hc32l110.lst st
-artup_hc32l110.s
+l_v5\ARM\PACK\HDSC\HC32L110\1.0.3\Device\Include --predefine="__MICROLIB SETA 1
+" --predefine="__UVISION_VERSION SETA 525" --predefine="_RTE_ SETA 1" --list=.\
+listings\startup_hc32l110.lst startup_hc32l110.s
 
 
 
@@ -452,9 +441,8 @@ Symbol: Stack_Mem
    Definitions
       At line 57 in file startup_hc32l110.s
    Uses
-      At line 284 in file startup_hc32l110.s
-      At line 286 in file startup_hc32l110.s
-
+      None
+Comment: Stack_Mem unused
 __initial_sp 00000100
 
 Symbol: __initial_sp
@@ -462,7 +450,8 @@ Symbol: __initial_sp
       At line 58 in file startup_hc32l110.s
    Uses
       At line 83 in file startup_hc32l110.s
-Comment: __initial_sp used once
+      At line 273 in file startup_hc32l110.s
+
 3 symbols
 
 
@@ -484,25 +473,24 @@ Symbol: Heap_Mem
    Definitions
       At line 68 in file startup_hc32l110.s
    Uses
-      At line 283 in file startup_hc32l110.s
-      At line 285 in file startup_hc32l110.s
-
+      None
+Comment: Heap_Mem unused
 __heap_base 00000000
 
 Symbol: __heap_base
    Definitions
       At line 67 in file startup_hc32l110.s
    Uses
-      None
-Comment: __heap_base unused
+      At line 274 in file startup_hc32l110.s
+Comment: __heap_base used once
 __heap_limit 00000100
 
 Symbol: __heap_limit
    Definitions
       At line 69 in file startup_hc32l110.s
    Uses
-      None
-Comment: __heap_limit unused
+      At line 275 in file startup_hc32l110.s
+Comment: __heap_limit used once
 4 symbols
 
 
@@ -945,15 +933,7 @@ Symbol: SysTick_Handler
       At line 98 in file startup_hc32l110.s
       At line 189 in file startup_hc32l110.s
 
-__user_initial_stackheap 00000028
-
-Symbol: __user_initial_stackheap
-   Definitions
-      At line 281 in file startup_hc32l110.s
-   Uses
-      At line 280 in file startup_hc32l110.s
-Comment: __user_initial_stackheap used once
-42 symbols
+41 symbols
 
 
 
@@ -967,8 +947,7 @@ Symbol: Heap_Size
       At line 64 in file startup_hc32l110.s
    Uses
       At line 68 in file startup_hc32l110.s
-      At line 285 in file startup_hc32l110.s
-
+Comment: Heap_Size used once
 Stack_Size 00000100
 
 Symbol: Stack_Size
@@ -976,8 +955,7 @@ Symbol: Stack_Size
       At line 54 in file startup_hc32l110.s
    Uses
       At line 57 in file startup_hc32l110.s
-      At line 284 in file startup_hc32l110.s
-
+Comment: Stack_Size used once
 __Vectors_Size 000000C0
 
 Symbol: __Vectors_Size
@@ -1009,13 +987,5 @@ Symbol: __main
    Uses
       At line 164 in file startup_hc32l110.s
 Comment: __main used once
-__use_two_region_memory 00000000
-
-Symbol: __use_two_region_memory
-   Definitions
-      At line 279 in file startup_hc32l110.s
-   Uses
-      None
-Comment: __use_two_region_memory unused
-3 symbols
-394 symbols in table
+2 symbols
+391 symbols in table

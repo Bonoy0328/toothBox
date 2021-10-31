@@ -24,6 +24,10 @@
                         Gpio_SetIO(2,3,TRUE);\
                         Gpio_SetIO(2,5,FALSE);
 
+//freeRTOS test
+#define TEST_TASK_NAME      "test"
+#define TEST_TASK_PRIO      3
+#define TEST_TASK_STK_SIZE  120
 
 #endif // !__MACDEF_H__
 

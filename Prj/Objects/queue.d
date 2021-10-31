@@ -5,6 +5,11 @@
 .\objects\queue.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 .\objects\queue.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\queue.o: .\profile\FreeRTOSConfig.h
+.\objects\queue.o: .\mcu\common\hc32l110.h
+.\objects\queue.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\core_cm0plus.h
+.\objects\queue.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_version.h
+.\objects\queue.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_compiler.h
+.\objects\queue.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_armcc.h
 .\objects\queue.o: .\freeRTos\inc\projdefs.h
 .\objects\queue.o: .\freeRTos\inc\portable.h
 .\objects\queue.o: .\freeRTos\inc\deprecated_definitions.h

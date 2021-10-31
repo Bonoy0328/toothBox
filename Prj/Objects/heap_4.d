@@ -4,6 +4,11 @@
 .\objects\heap_4.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 .\objects\heap_4.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\heap_4.o: .\profile\FreeRTOSConfig.h
+.\objects\heap_4.o: .\mcu\common\hc32l110.h
+.\objects\heap_4.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\core_cm0plus.h
+.\objects\heap_4.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_version.h
+.\objects\heap_4.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_compiler.h
+.\objects\heap_4.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_armcc.h
 .\objects\heap_4.o: .\freeRTos\inc\projdefs.h
 .\objects\heap_4.o: .\freeRTos\inc\portable.h
 .\objects\heap_4.o: .\freeRTos\inc\deprecated_definitions.h

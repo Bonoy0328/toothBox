@@ -33,3 +33,5 @@
 .\objects\main.o: .\freeRTos\inc\deprecated_definitions.h
 .\objects\main.o: .\freeRTos\port\RVDS\ARM_CM0\portmacro.h
 .\objects\main.o: .\freeRTos\inc\mpu_wrappers.h
+.\objects\main.o: .\freeRTos\inc\task.h
+.\objects\main.o: .\freeRTos\inc\list.h
