@@ -12,7 +12,9 @@ PUTCHAR_PROTOTYPE
 
 int32_t main(void)
 {
+    // Hardware initialization
     HAL_SystemInit();
+    // Software initialization
 	StartTaskScheduler();
 	return 1;												
 }

@@ -64,6 +64,12 @@ void StopTask(uint16_t TaskID){
     }
 }
 
+
+void GoToSleep(void)
+{
+    // 低功耗函数
+}
+
 /************************************************************
  * start Task Scheduler
  * **********************************************************/
@@ -73,8 +79,8 @@ void StartTaskScheduler(void)
     uint8_t i;
     for(i = 0;i < 16;i++)
     {
-        TaskList[i].TaskID = 0;
-        TaskList[i].time = 0;
+        TaskList[i].TaskID    = 0;
+        TaskList[i].time      = 0;
         TaskList[i].timePoint = 0;
     }
     // start Task
@@ -90,14 +96,20 @@ void StartTaskScheduler(void)
 void TaskScheduler(void)
 {
     uint8_t i;
-    for(i = 0;i < 16;i++){
-        if(TaskList[i].TaskID){
-            if((systemVar.timeline - TaskList[i].timePoint)>=TaskList[i].time)
-            {
-                TaskList[i].TaskID = 0;
-                TaskList[i].callBack();
+    if(systemVar.TaskFlag){
+        // if task is runing
+        for(i = 0;i < 16;i++){
+            if(TaskList[i].TaskID){
+                if((systemVar.timeline - TaskList[i].timePoint)>=TaskList[i].time)
+                {
+                    TaskList[i].TaskID = 0;
+                    TaskList[i].callBack();
+                }
             }
         }
+    }else{
+        // if task not run got to sleep
+        GoToSleep();
     }
 }
 
