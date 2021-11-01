@@ -6,8 +6,11 @@
 
 typedef struct
 {
+    uint32_t timeline;
     uint16_t PowerAdcValue;
     uint16_t MotorAdcValue;
+    uint16_t TaskFlag;
+    uint16_t TaskPreFlag;
 }SystemVar_t;
 
 typedef struct
@@ -22,15 +25,13 @@ enum ADCFALG{
     ITR = 2,
 };
 
-typedef union
+typedef struct
 {
-    struct
-    {
-        uint8_t start1Ms:1;
-    }bit;
-    uint8_t TaskFlag;
+    uint16_t TaskID;
+    uint16_t time;
+    uint32_t timePoint;
+    void (* callBack)(void);
 }Task_t;
-
 
 
 #endif // !__GLOTYPEDEF_H__

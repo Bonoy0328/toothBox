@@ -3,9 +3,9 @@
 
 #include "GloTypeDef.h"
 
+Task_t TaskList[16];
 SystemVar_t systemVar;
 volatile SystemFlag_t systemFlag;
-volatile Task_t taskFlag;
 
 #endif // !__GLOVARDEF_H__
 

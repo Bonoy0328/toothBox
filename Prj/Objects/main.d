@@ -26,12 +26,3 @@
 .\objects\main.o: .\driver\inc\bt.h
 .\objects\main.o: .\driver\inc\lpuart.h
 .\objects\main.o: .\driver\inc\adc.h
-.\objects\main.o: .\freeRTos\inc\FreeRTOS.h
-.\objects\main.o: .\profile\FreeRTOSConfig.h
-.\objects\main.o: .\freeRTos\inc\projdefs.h
-.\objects\main.o: .\freeRTos\inc\portable.h
-.\objects\main.o: .\freeRTos\inc\deprecated_definitions.h
-.\objects\main.o: .\freeRTos\port\RVDS\ARM_CM0\portmacro.h
-.\objects\main.o: .\freeRTos\inc\mpu_wrappers.h
-.\objects\main.o: .\freeRTos\inc\task.h
-.\objects\main.o: .\freeRTos\inc\list.h

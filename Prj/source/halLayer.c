@@ -173,9 +173,7 @@ void Bt1Int(void)
 {
     if (TRUE == Bt_GetIntFlag(TIM1))
     {
-        if(taskFlag.TaskFlag){
-            systemFlag.time1Ms = 1;
-        }
+        systemVar.timeline++;
         Bt_ClearIntFlag(TIM1);
     }
 }

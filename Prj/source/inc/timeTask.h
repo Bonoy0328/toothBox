@@ -3,7 +3,7 @@
 
 #include "halLayer.h"
 
-void TimeTask(void);
+void StartTaskScheduler(void);
 
 #endif // !__TIMETASK_H__
 

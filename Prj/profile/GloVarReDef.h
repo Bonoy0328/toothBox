@@ -2,9 +2,9 @@
 #define __GLOVARREDEF_H__
 #include "GloTypeDef.h"
 
+extern Task_t TaskList[16];
 extern SystemVar_t systemVar;
 extern volatile SystemFlag_t systemFlag;
-extern volatile Task_t taskFlag;
 
 #endif // __GLOVARREDEF_H__
 
