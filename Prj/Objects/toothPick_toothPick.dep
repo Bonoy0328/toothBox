@@ -18,9 +18,9 @@ I (.\driver\inc\clk.h)(0x5ECDF70F)
 I (.\driver\inc\interrupts_hc32l110.h)(0x5ECDF70F)
 I (.\driver\inc\gpio.h)(0x5ECDF837)
 I (.\source\inc\ddl_device.h)(0x5F2386F7)
-F (.\source\main.c)(0x617FC8D0)(--c99 --gnu -c --cpu Cortex-M0+ -D__MICROLIB -g -W --apcs=interwork --split_sections -I .\driver\inc -I .\mcu\common -I .\source\inc -I .\profile -I .\freeRTos\inc -I .\freeRTos\port\RVDS\ARM_CM0 -I .\freeRTos\port\MemMang-I.\RTE\_toothPick-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\HDSC\HC32L110\1.0.3\Device\Include-D__UVISION_VERSION="525" -D_RTE_-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+F (.\source\main.c)(0x617FCEE9)(--c99 --gnu -c --cpu Cortex-M0+ -D__MICROLIB -g -W --apcs=interwork --split_sections -I .\driver\inc -I .\mcu\common -I .\source\inc -I .\profile -I .\freeRTos\inc -I .\freeRTos\port\RVDS\ARM_CM0 -I .\freeRTos\port\MemMang-I.\RTE\_toothPick-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\HDSC\HC32L110\1.0.3\Device\Include-D__UVISION_VERSION="525" -D_RTE_-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
 I (.\profile\GloVarDef.h)(0x617FBBAA)
-I (.\profile\GloTypeDef.h)(0x617FC112)
+I (.\profile\GloTypeDef.h)(0x618B62EE)
 I (.\driver\inc\ddl.h)(0x5ECDF70F)
 I (.\mcu\common\base_types.h)(0x5ECDF70F)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
@@ -38,18 +38,18 @@ I (.\driver\inc\clk.h)(0x5ECDF70F)
 I (.\driver\inc\interrupts_hc32l110.h)(0x5ECDF70F)
 I (.\driver\inc\gpio.h)(0x5ECDF837)
 I (.\source\inc\ddl_device.h)(0x5F2386F7)
-I (.\profile\MacDef.h)(0x617FC14F)
-I (.\source\inc\timeTask.h)(0x617FC8CA)
-I (.\source\inc\halLayer.h)(0x61790EFE)
+I (.\profile\MacDef.h)(0x618B6470)
+I (.\source\inc\timeTask.h)(0x618B65D2)
+I (.\source\inc\halLayer.h)(0x618B63C8)
 I (.\profile\GloVarReDef.h)(0x617FBC2D)
 I (.\driver\inc\bt.h)(0x5ECDF70F)
 I (.\driver\inc\lpuart.h)(0x5ECDF70F)
 I (.\driver\inc\adc.h)(0x5ECDF70F)
-F (.\source\timeTask.c)(0x617FCD03)(--c99 --gnu -c --cpu Cortex-M0+ -D__MICROLIB -g -W --apcs=interwork --split_sections -I .\driver\inc -I .\mcu\common -I .\source\inc -I .\profile -I .\freeRTos\inc -I .\freeRTos\port\RVDS\ARM_CM0 -I .\freeRTos\port\MemMang-I.\RTE\_toothPick-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\HDSC\HC32L110\1.0.3\Device\Include-D__UVISION_VERSION="525" -D_RTE_-o .\objects\timetask.o --omf_browse .\objects\timetask.crf --depend .\objects\timetask.d)
-I (.\source\inc\timeTask.h)(0x617FC8CA)
-I (.\source\inc\halLayer.h)(0x61790EFE)
+F (.\source\timeTask.c)(0x618B663B)(--c99 --gnu -c --cpu Cortex-M0+ -D__MICROLIB -g -W --apcs=interwork --split_sections -I .\driver\inc -I .\mcu\common -I .\source\inc -I .\profile -I .\freeRTos\inc -I .\freeRTos\port\RVDS\ARM_CM0 -I .\freeRTos\port\MemMang-I.\RTE\_toothPick-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\HDSC\HC32L110\1.0.3\Device\Include-D__UVISION_VERSION="525" -D_RTE_-o .\objects\timetask.o --omf_browse .\objects\timetask.crf --depend .\objects\timetask.d)
+I (.\source\inc\timeTask.h)(0x618B65D2)
+I (.\source\inc\halLayer.h)(0x618B63C8)
 I (.\profile\GloVarReDef.h)(0x617FBC2D)
-I (.\profile\GloTypeDef.h)(0x617FC112)
+I (.\profile\GloTypeDef.h)(0x618B62EE)
 I (.\driver\inc\ddl.h)(0x5ECDF70F)
 I (.\mcu\common\base_types.h)(0x5ECDF70F)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
@@ -67,14 +67,15 @@ I (.\driver\inc\clk.h)(0x5ECDF70F)
 I (.\driver\inc\interrupts_hc32l110.h)(0x5ECDF70F)
 I (.\driver\inc\gpio.h)(0x5ECDF837)
 I (.\source\inc\ddl_device.h)(0x5F2386F7)
-I (.\profile\MacDef.h)(0x617FC14F)
+I (.\profile\MacDef.h)(0x618B6470)
 I (.\driver\inc\bt.h)(0x5ECDF70F)
 I (.\driver\inc\lpuart.h)(0x5ECDF70F)
 I (.\driver\inc\adc.h)(0x5ECDF70F)
-F (.\source\halLayer.c)(0x617FBEA3)(--c99 --gnu -c --cpu Cortex-M0+ -D__MICROLIB -g -W --apcs=interwork --split_sections -I .\driver\inc -I .\mcu\common -I .\source\inc -I .\profile -I .\freeRTos\inc -I .\freeRTos\port\RVDS\ARM_CM0 -I .\freeRTos\port\MemMang-I.\RTE\_toothPick-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\HDSC\HC32L110\1.0.3\Device\Include-D__UVISION_VERSION="525" -D_RTE_-o .\objects\hallayer.o --omf_browse .\objects\hallayer.crf --depend .\objects\hallayer.d)
-I (.\source\inc\halLayer.h)(0x61790EFE)
+I (.\source\inc\TaskScheduler.h)(0x618B6611)
+F (.\source\halLayer.c)(0x6185354F)(--c99 --gnu -c --cpu Cortex-M0+ -D__MICROLIB -g -W --apcs=interwork --split_sections -I .\driver\inc -I .\mcu\common -I .\source\inc -I .\profile -I .\freeRTos\inc -I .\freeRTos\port\RVDS\ARM_CM0 -I .\freeRTos\port\MemMang-I.\RTE\_toothPick-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\HDSC\HC32L110\1.0.3\Device\Include-D__UVISION_VERSION="525" -D_RTE_-o .\objects\hallayer.o --omf_browse .\objects\hallayer.crf --depend .\objects\hallayer.d)
+I (.\source\inc\halLayer.h)(0x618B63C8)
 I (.\profile\GloVarReDef.h)(0x617FBC2D)
-I (.\profile\GloTypeDef.h)(0x617FC112)
+I (.\profile\GloTypeDef.h)(0x618B62EE)
 I (.\driver\inc\ddl.h)(0x5ECDF70F)
 I (.\mcu\common\base_types.h)(0x5ECDF70F)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
@@ -92,7 +93,7 @@ I (.\driver\inc\clk.h)(0x5ECDF70F)
 I (.\driver\inc\interrupts_hc32l110.h)(0x5ECDF70F)
 I (.\driver\inc\gpio.h)(0x5ECDF837)
 I (.\source\inc\ddl_device.h)(0x5F2386F7)
-I (.\profile\MacDef.h)(0x617FC14F)
+I (.\profile\MacDef.h)(0x618B6470)
 I (.\driver\inc\bt.h)(0x5ECDF70F)
 I (.\driver\inc\lpuart.h)(0x5ECDF70F)
 I (.\driver\inc\adc.h)(0x5ECDF70F)
@@ -225,7 +226,33 @@ I (.\driver\inc\clk.h)(0x5ECDF70F)
 I (.\driver\inc\interrupts_hc32l110.h)(0x5ECDF70F)
 I (.\driver\inc\gpio.h)(0x5ECDF837)
 I (.\source\inc\ddl_device.h)(0x5F2386F7)
-F (.\profile\MacDef.h)(0x617FC14F)()
+F (.\source\TaskScheduler.c)(0x6184A55E)(--c99 --gnu -c --cpu Cortex-M0+ -D__MICROLIB -g -W --apcs=interwork --split_sections -I .\driver\inc -I .\mcu\common -I .\source\inc -I .\profile -I .\freeRTos\inc -I .\freeRTos\port\RVDS\ARM_CM0 -I .\freeRTos\port\MemMang-I.\RTE\_toothPick-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\HDSC\HC32L110\1.0.3\Device\Include-D__UVISION_VERSION="525" -D_RTE_-o .\objects\taskscheduler.o --omf_browse .\objects\taskscheduler.crf --depend .\objects\taskscheduler.d)
+I (.\source\inc\TaskScheduler.h)(0x618B6611)
+I (.\source\inc\halLayer.h)(0x618B63C8)
+I (.\profile\GloVarReDef.h)(0x617FBC2D)
+I (.\profile\GloTypeDef.h)(0x618B62EE)
+I (.\driver\inc\ddl.h)(0x5ECDF70F)
+I (.\mcu\common\base_types.h)(0x5ECDF70F)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5D9AD218)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5D9AD218)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5D9AD212)
+I (.\mcu\common\hc32l110.h)(0x5ECDF70F)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\core_cm0plus.h)(0x5D2590B6)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_version.h)(0x5D2590B6)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5D2590B6)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5D2590B6)
+I (.\mcu\common\system_hc32l110.h)(0x5ED73BA1)
+I (.\driver\inc\clk.h)(0x5ECDF70F)
+I (.\driver\inc\interrupts_hc32l110.h)(0x5ECDF70F)
+I (.\driver\inc\gpio.h)(0x5ECDF837)
+I (.\source\inc\ddl_device.h)(0x5F2386F7)
+I (.\profile\MacDef.h)(0x618B6470)
+I (.\driver\inc\bt.h)(0x5ECDF70F)
+I (.\driver\inc\lpuart.h)(0x5ECDF70F)
+I (.\driver\inc\adc.h)(0x5ECDF70F)
+F (.\profile\MacDef.h)(0x618B6470)()
 F (.\profile\GloVarReDef.h)(0x617FBC2D)()
 F (.\profile\GloVarDef.h)(0x617FBBAA)()
-F (.\profile\GloTypeDef.h)(0x617FC112)()
+F (.\profile\GloTypeDef.h)(0x618B62EE)()

@@ -3,28 +3,16 @@
 
 #define DEBUG
 
-#define OpenLed1    Gpio_SetIO(3,4,TRUE);
-#define CloseLed1   Gpio_SetIO(3,4,FALSE);
-#define OpenLed2    Gpio_SetIO(0,2,TRUE);
-#define CloseLed2   Gpio_SetIO(0,2,FALSE);
-#define OpenLed3    Gpio_SetIO(0,3,TRUE);
-#define CloseLed3   Gpio_SetIO(0,3,FALSE);
-#define OpenLed4    Gpio_SetIO(0,1,TRUE);
-#define CloseLed4   Gpio_SetIO(0,1,FALSE);
+#define MainTaskID          0x0001
+#define CurrentTaskID       0x0002
+#define MotorReverTaskID    0x0004
 
-#define MotorRotate Gpio_SetIO(2,3,FALSE);\
-                    Gpio_SetIO(2,5,TRUE);\
-                    delay1ms(300);\
-                    Gpio_SetIO(3,2,TRUE);\
-                    Gpio_SetIO(3,3,FALSE);
 
-#define MotorRotateRev  Gpio_SetIO(3,2,FALSE);\
-                        Gpio_SetIO(3,3,TRUE);\
-                        delay1ms(300);\
-                        Gpio_SetIO(2,3,TRUE);\
-                        Gpio_SetIO(2,5,FALSE);
+#define ITRMAXLEN                   100
 
-#define MainTaskID      0x0001
+#define TrigerScale                 1.08
+#define MotorCurrentshledValue      2400
+#define MotorStopTime               2000
 
 #endif // !__MACDEF_H__
 

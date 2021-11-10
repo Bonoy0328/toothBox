@@ -25,3 +25,4 @@
 .\objects\timetask.o: .\driver\inc\bt.h
 .\objects\timetask.o: .\driver\inc\lpuart.h
 .\objects\timetask.o: .\driver\inc\adc.h
+.\objects\timetask.o: .\source\inc\TaskScheduler.h

@@ -1,73 +1,60 @@
 #include "timeTask.h"
-
+#include "TaskScheduler.h"
 /************************************************************
  * Personal task declaration
  * **********************************************************/
-void MainTask(void);
-
-/***************************************************
- * trigger a task, execute the task immediately
- * TaskID : the Task ID, one hot code
- *          Example : 0x0001 or 0x0002
- * callback : task callback function
- *          Example : void MainTask(void)
- * **************************************************/
-void SetTaskEvent(uint16_t TaskID,void (* callBack)(void)){
-    uint8_t i;
-    for(i = 0;i < 16;i++)
-    {
-        if((TaskID >> i)&0x01){
-            TaskList[i].TaskID = TaskID;
-            TaskList[i].time = systemVar.timeline;
-            TaskList[i].timePoint = systemVar.timeline;
-            TaskList[i].callBack = callBack;
-            break;
-        }
-    }
-}
-
-/************************************************************
- * start a Task , execute the task after a delay of $time ms
- * TaskID : the Task ID, one hot code
- *          Example : 0x0001 or 0x0002
- * time   : the delay time , MS
- * callback : task callback function
- *          Example : void MainTask(void)
- * **********************************************************/
-void StartTask(uint16_t TaskID,uint16_t time,void (* callBack)(void)){
-    uint8_t i;
-    for(i = 0;i < 16;i++)
-    {
-        if((TaskID >> i)&0x01){
-            TaskList[i].TaskID = TaskID;
-            TaskList[i].time = time;
-            TaskList[i].timePoint = systemVar.timeline;
-            TaskList[i].callBack = callBack;
-            break;
-        }
-    }
-}
-
-/************************************************************
- * stop a Task , kill the task
- * **********************************************************/
-void StopTask(uint16_t TaskID){
-    uint8_t i;
-    for(i = 0;i < 16;i++)
-    {
-        if((TaskID >> i)&0x01){
-            TaskList[i].TaskID = 0;
-            TaskList[i].time = 0;
-            TaskList[i].timePoint = 0;
-            break;
-        }
-    }
-}
-
-
-void GoToSleep(void)
+void MainTask(void)
 {
-    // 低功耗函数
+    static uint16_t ItrValueFilter[ITRMAXLEN] = {0};
+    static uint8_t index = 0;
+    uint8_t i;
+    if(!systemFlag.motorRuning){
+        ItrValueFilter[index++] = GetAdcValue(ITR);
+        if(ItrValueFilter[index - 1] > (uint16_t)(TrigerScale*GetBufAvg(ItrValueFilter))){
+            systemFlag.motorRuning = 1;
+            SetTaskEvent(CurrentTaskID,MotorCurrentDetectTask);
+            MotorRotate;
+        }
+        index %= ITRMAXLEN;
+    }
+    // printf("test for scheduler\r\n");
+    StartTask(MainTaskID,100,MainTask);
+}
+
+uint16_t GetBufAvg(uint16_t *ItrValueFilter)
+{
+    uint16_t res = 0;
+    uint8_t i;
+    for(i = 0;i < ITRMAXLEN;i++)res += *(ItrValueFilter+i);
+    return (uint16_t)(res / ITRMAXLEN);
+}
+
+void MotorReverFun(void)
+{
+    MotorRotateRev;
+    systemFlag.motorReRuning = 1;
+    SetTaskEvent(CurrentTaskID,MotorCurrentDetectTask);
+}
+
+void MotorCurrentDetectTask(void)
+{
+    static uint16_t motorCurrent;
+    motorCurrent = GetAdcValue(MOTOR);
+    if(motorCurrent > MotorCurrentshledValue){
+        MotorStop;
+        if(systemFlag.motorRuning){
+            systemFlag.motorRuning = 0;
+            StartTask(MotorReverTaskID,MotorStopTime,MotorReverFun);
+        }else if(systemFlag.motorReRuning){
+            systemFlag.motorReRuning = 0;
+        }
+    }
+    if(systemFlag.motorRuning || systemFlag.motorReRuning){
+        StartTask(CurrentTaskID,100,MotorCurrentDetectTask);
+    }
+
+    
+
 }
 
 /************************************************************
@@ -85,45 +72,9 @@ void StartTaskScheduler(void)
     }
     // start Task
     StartTask(MainTaskID,1000,MainTask);
-
     // start Task Scheduler
     while(1)TaskScheduler();
     
 }
-/************************************************************
- * Task Scheduler
- * **********************************************************/
-void TaskScheduler(void)
-{
-    uint8_t i;
-    if(systemVar.TaskFlag){
-        // if task is runing
-        for(i = 0;i < 16;i++){
-            if(TaskList[i].TaskID){
-                if((systemVar.timeline - TaskList[i].timePoint)>=TaskList[i].time)
-                {
-                    TaskList[i].TaskID = 0;
-                    TaskList[i].callBack();
-                }
-            }
-        }
-    }else{
-        // if task not run got to sleep
-        GoToSleep();
-    }
-}
-
-/************************************************************
- * Personal task
- * **********************************************************/
-void MainTask(void)
-{
-    printf("test for scheduler\r\n");
-    StartTask(MainTaskID,1000,MainTask);
-}
-
-
-
-
 
 

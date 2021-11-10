@@ -17,6 +17,8 @@ typedef struct
 {
     uint8_t MotorDir:1;
     uint8_t time1Ms:1;
+    uint8_t motorRuning:1;
+    uint8_t motorReRuning:1;
 }SystemFlag_t;
 
 enum ADCFALG{

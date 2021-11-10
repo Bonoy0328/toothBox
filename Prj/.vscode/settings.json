@@ -6,6 +6,9 @@
         "glotypedef.h": "c",
         "timetask.h": "c",
         "hallayer.h": "c",
-        "glovarredef.h": "c"
+        "glovarredef.h": "c",
+        "ddl.h": "c",
+        "macdef.h": "c",
+        "taskscheduler.h": "c"
     }
 }

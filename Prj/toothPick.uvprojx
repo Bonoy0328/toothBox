@@ -451,6 +451,11 @@
               <FileType>1</FileType>
               <FilePath>.\driver\src\lpuart.c</FilePath>
             </File>
+            <File>
+              <FileName>TaskScheduler.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\source\TaskScheduler.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
